@@ -1,0 +1,32 @@
+<html>
+<head>
+<style>
+body { color: black; }
+h1 { color: #2874A6; }
+</style>
+</head>
+
+
+<h1>COUNT PAGE</h1>
+
+<!-- <a href="http://127.0.0.1:8000">Back to Homepage</a> -->
+<a href="{% url 'home' %}">Back to Home</a>
+<br />
+<a href="{% url 'about' %}">About Page</a>
+
+<h2> Your Text: {{ fulltext }} </h2>
+<h2> Number of words: {{ count }} </h2> 
+ 
+
+<h3>Dictionary List </h3>
+
+<h4> {{ sortedwords }} </h4>
+<br />
+
+{% for word, counttotal in sortedwords %}
+
+{{ word }} = {{ counttotal }}
+<br />
+
+{% endfor %}
+

@@ -1,0 +1,25 @@
+<html>
+<head>
+<style>
+body { color: black; }
+h1 { color: #2874A6; }
+</style>
+</head>
+
+
+<h1>HOME PAGE</h1>
+<div><a href="{% url 'about' %}">About Page</a></div>
+<br />
+<br />
+
+<header>WORD COUNT FORM!</header>
+
+<!-- 
+<img src="/static/images/cool.gif" /> -->
+
+<form action="{% url 'count' %}">
+	<textarea cols="40" rows="5" name="fulltext" ></textarea>
+	<br />
+	<input type="submit" value="Count!" />
+
+<form/>
